@@ -1,0 +1,17 @@
+{
+    "version": "1",
+    "server": "http://animehay.tv",
+    "details": "no detail",
+    "page": "$link?page=$page",
+    "guide": {
+        "node": {},
+        "type": "list",
+        "item": {
+            "name": {},
+            "href": {},
+            "src": {},
+            "rate": {},
+            "description": {}
+        }
+    }
+}

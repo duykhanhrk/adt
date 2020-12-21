@@ -1,0 +1,56 @@
+-----------------------------------------------
+COMMANDS
+------------------------
+new <DB>
+
+delete <DB>
+
+ext [EXT_ID]
+
+get <DB> <link> [OPTION]
+    OPTION
+        -f <FROM PAGE> <TO PAGE>
+        -s <PAGE> .. [PAGE]
+        --a | default
+
+change <DB> <FROM DB> [OPTION]
+    OPTION
+        --g | default
+        --i
+        --t
+
+view <DB> [OPTION]
+    OPTION
+        --a | default
+        -s <INDEX> .. <INDEX>
+        -f <FROM INDEX> <TO INDEX>
+        
+find <EXP> <DB> .. [DB]
+
+save [NODE]
+
+load [NODE]
+-----------------------------------------------
+-----------------------------------------------
+guide.py
+------------------------
+node_handle(node_obj, node)
+guide_handle(guide_obj, node)
+-----------------------------------------------
+-----------------------------------------------
+support.py
+------------------------
+echo
+--------
+progress(status, detail)
+notification(notification_code)
+
+Exmaple:
+[SUCCESS] https://athena.com
+'get -p': This command is wrong. => get <DB> <LINK>
+'1': This command is wrong. => get <DB> <LINK>
+'got': This command doesn't exsits.
+'DB': This database exsits.
+'DB': This database doesn't exsits.
+'100': This name doesn't accepted.
+-----------------------------------------------

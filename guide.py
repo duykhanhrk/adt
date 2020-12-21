@@ -1,42 +1,11 @@
-"""
-{
-	node: {
-		tag: "",
-		attr: "",
-		type: only | all | <int>
-	}
-
-	type: text | attribute | dict | list
-		// attribute => atrribute: ""
-		// dict => properties: ""
-		// list => item
-	item: {
-		node {
-
-		}
-
-		method: ""
-	}
-
-	properties: {
-		property_name: {
-			node: {
-
-			}
-
-			method: ""
-		}
-	}
-
-	option {
-
-	}
-}
-"""
-
 import requests
 from bs4 import BeautifulSoup
 
+# node_obj: it is dict, contains the properties
+#	> tag: it is a tag of html
+#	> attribute: it is an dict, contains the attribute of tag.
+#	> type: includes the values 'only' | 'all' | <int>
+# node: it is a string.
 def node_handle(node_obj, node):
 	if not "type" in node_obj:
 		if "tag" in node_obj and "attribute" in node_obj:
@@ -83,7 +52,19 @@ def node_handle(node_obj, node):
 	else:
 		raise "node_obj: There is no type \'" + str(node_obj["type"]) + "\'."
 
-
+# guide_obj is a dict, it includes the properties
+# 	> node: { }, it is a node_obj
+#	> type: "type", types of type property include
+#		> 'text': if type is this then guide_obj doesn't need any property.
+#		> 'attribute': if type is this then guide_obj need to have a property which is 'attribute'.
+#		> 'dict': if type is this then guide_obj need to have a property which is 'properties'.
+#		  'properties' property contains properties's name and guide_obj.
+#		  Example: 'properties': { 'property_1': { node: {}, type: 'type', 'property_for_type': { } }, 'property_2': { }, .. }
+#		> 'list': if type is this then guide_obj need to have a rpoperty which is 'item', it is a guide_obj.
+# 	> option: {}, it is a dict, includes the properties
+#		> works: it is an array, contains the values 'strip' | 'to_string' | 'to_int'.
+#		> replace: it is an array, contrains the arrays, which contain two values ['word_need_to_replace', 'word replace'].
+# node is a string.
 def guide_handle(guide_obj, node):
 	if "node" in guide_obj:
 		if type (guide_obj["node"]) == dict:
@@ -142,15 +123,10 @@ def guide_handle(guide_obj, node):
 
 	return result
 
-"""
-	prm_obj:
-	{
-		version: "1",
-		guide:
-		{
-		}
-	}
-"""
+# prm_obj is a dict, it includes two properties
+#	> version: "1"
+#	> guide: { } : it is guide_obj.
+# html_text is a string.
 def handle(prm_obj, html_text):
 	if not "version" in prm_obj:
 		raise "prm_obj: There must have \'version\' property."
