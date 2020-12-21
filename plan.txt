@@ -1,4 +1,21 @@
 -----------------------------------------------
+TREE
+------------------------
+[exts]
+    > ext_1.json
+    > ext_2.json
+    > ..
+[nodes]
+    > default_node.json
+    > node_1.json
+    > node_2.json
+    > ..
+config.json
+    > exts_folder: "exts"
+    > nodes_folder: "nodes"
+    > current_nodes: "default_node"
+-----------------------------------------------
+-----------------------------------------------
 COMMANDS
 ------------------------
 new <DB>
@@ -32,25 +49,52 @@ save [NODE]
 load [NODE]
 -----------------------------------------------
 -----------------------------------------------
-guide.py
+------------------------
+tutorial.py
 ------------------------
 node_handle(node_obj, node)
 guide_handle(guide_obj, node)
------------------------------------------------
------------------------------------------------
-support.py
+handle()
 ------------------------
-echo
---------
-progress(status, detail)
-notification(notification_code)
+------------------------
+message.py
+------------------------
+ERROR = {}
+STATUS = {}
+message(message_content)
+progress_message(status, message_content)
+error_message(error_obj, error_code)
 
 Exmaple:
 [SUCCESS] https://athena.com
-'get -p': This command is wrong. => get <DB> <LINK>
-'1': This command is wrong. => get <DB> <LINK>
-'got': This command doesn't exsits.
-'DB': This database exsits.
-'DB': This database doesn't exsits.
-'100': This name doesn't accepted.
+'error': This command is wrong.
+------------------------
+------------------------
+main.py
+main -> is_config_file_exists? -> center.load_config() -> is_config_ok? -> is_tree_ok? -> center.load_database -> act
+------------------------
+main()
+is_tree_ok()
+------------------------
+------------------------
+branch_center.py
+------------------------
+handle(command)
+------------------------
+------------------------
+new_command.py
+------------------------
+handle(command)
+is_input_ok()
+act()
+------------------------
+-----------------------------------------------
+-----------------------------------------------
+<=> main ::::::::::::::::: center
+    |                       ::
+branch_center ==            :: 
+|              |            ::
+new_command  delete_command ::
+   ::             ::        ::
+::::::::::::::::::::::::::::::
 -----------------------------------------------

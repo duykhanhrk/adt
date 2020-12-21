@@ -123,18 +123,18 @@ def guide_handle(guide_obj, node):
 
 	return result
 
-# prm_obj is a dict, it includes two properties
+# tutorial_obj is a dict, it includes two properties
 #	> version: "1"
 #	> guide: { } : it is guide_obj.
 # html_text is a string.
-def handle(prm_obj, html_text):
-	if not "version" in prm_obj:
-		raise "prm_obj: There must have \'version\' property."
+def handle(tutorial_obj, html_text):
+	if not "version" in tutorial_obj:
+		raise "tutorial_obj: There must have \'version\' property."
 
 	if not "guide":
-		raise "prm_obj: There must have \'guide\' property."
+		raise "tutorial_obj: There must have \'guide\' property."
 
-	if prm_obj["vesion"] == "1":
-		guide_handle(prm_obj["guide"], html_text)
+	if tutorial_obj["vesion"] == "1":
+		guide_handle(tutorial_obj["guide"], html_text)
 	else
-		raise "prm_obj.version: no \'" + prm_obj["version"] + "\'."
+		raise "tutorial_obj.version: no \'" + tutorial_obj["version"] + "\'."
