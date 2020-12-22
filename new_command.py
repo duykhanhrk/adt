@@ -3,8 +3,8 @@ import message
 
 def act(database, options):
     if not options["--r"] and data_center.in_databases(database):
-        message.error_message(database, "dbe")
-        return False
+            message.error_message(database, "dbe")
+            return False
 
     if not data_center.is_true_database_name(database):
         message.error_message(database, "dnn")
@@ -16,7 +16,7 @@ def act(database, options):
 def handle(command):
     options = {"--r": False}
     if "--r" in command:
-        options["--r"] == True
+        options["--r"] = True
         command.remove("--r")
 
     if len(command) == 0:
@@ -27,3 +27,4 @@ def handle(command):
         return act(command[0], options)
 
     message.error_message(command[1], "cmw")
+    return False

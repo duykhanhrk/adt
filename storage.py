@@ -39,13 +39,43 @@ def save(file_path, data):
         json.dump(data, outfile)
 
 def load_ext(ext_id):
-    return load(data_center.get_exts_folder() + SAPERATE + ext_id + ".json")
+    return load(data_center.get_exts_folder() + SAPERATE + ext_id + ".ext_json")
 
 def save_ext(ext_id, data):
-    save(data_center.get_exts_folder() + SAPERATE + ext_id + ".json", data)
+    save(data_center.get_exts_folder() + SAPERATE + ext_id + ".ext_json", data)
 
 def load_node(node_id):
-    return load(data_center.get_nodes_folder() + SAPERATE + node_id + ".json")
+    return load(data_center.get_nodes_folder() + SAPERATE + node_id + ".node_json")
 
 def save_node(node_id, data):
-    save(data_center.get_nodes_folder() + SAPERATE + node_id + ".json", data)
+    save(data_center.get_nodes_folder() + SAPERATE + node_id + ".node_json", data)
+
+def is_true_ext_name(ext_name):
+    chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+    for c in ext_name:
+        if not c in chrs:
+            return False
+    return True
+
+def list_exts():
+    ext_jsons = []
+    for _file in os.listdir(os.path.join(current_path(), data_center.get_exts_folder())):
+        if _file.endswith(".ext_json"):
+            if is_true_ext_name(_file[0:-9]):
+                ext_jsons.append(_file[0:-9])
+    return ext_jsons
+
+def is_true_node_name(node_name):
+    chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+    for c in node_name:
+        if not c in chrs:
+            return False
+    return True
+
+def list_nodes():
+    node_jsons = []
+    for _file in os.listdir(os.path.join(current_path(), data_center.get_nodes_folder())):
+        if _file.endswith(".node_json"):
+            if is_true_node_name(_file[0:-9]):
+                node_jsons.append(_file[0:-9])
+    return node_jsons

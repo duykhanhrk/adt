@@ -22,6 +22,8 @@ new <DB>
 
 delete <DB>
 
+dbs [DB] .. [DB]
+
 ext [EXT_ID]
 
 get <DB> <link> [OPTION]
