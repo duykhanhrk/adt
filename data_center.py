@@ -1,10 +1,13 @@
+import storage
+
 CONFIG = { }
 
 DATABASES = { }
 
-MESSAGE_TRAY = [ ]
-
 # config
+def in_config(config):
+    return config in CONFIG
+
 def get_exts_folder():
     return CONFIG["exts_folder"]
 
@@ -17,8 +20,13 @@ def get_current_node():
 def set_current_node(node):
     CONFIG["current_node"] = node
 
+def load_config():
+    global CONFIG
+    CONFIG = storage.load("config.json")
+    return True
+
 def save_config():
-    pass
+    storage.save(CONFIG["config_file"], CONFIG)
 
 # Database
 def packet_count(database):
@@ -39,6 +47,9 @@ def database_count():
 def database_keys():
     return DATABASES.keys()
 
+def in_databases(database):
+    return database in DATABASES
+
 def get_database(database):
     return database
 
@@ -55,3 +66,11 @@ def ufity_databases(into_database, from_database):
     for data in DATABASES[from_database]:
         if not data in DATABASES[into_database]:
             DATABASES[into_database].append(data)
+
+def load_node():
+    node = storage.load_node(get_current_node())
+    DATABASES = node["databases"]
+    return True
+
+def save_node(node_name):
+    storage.save_node(node_name, { "name": node_name, "database": DATABASES })

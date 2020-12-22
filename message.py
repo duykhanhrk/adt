@@ -1,9 +1,14 @@
 ERROR = {
-    "cmw": "This command wrong."
+    "cmw": "This command wrong.",
     "cmd": "This command doesn't exist.",
     "dbe": "This database exists.",
     "dbd": "This database doesn't exist.",
-    "nma": "This command doesn't accepted."
+    "nma": "This command doesn't accepted.",
+    "fid": "This file doesn't exist.",
+    "fic": "Couldn't load this file.",
+    "drn": "No such directory.",
+    "prn": "Couldn't find this property.",
+    "ndn": "Couldn't find this node."
 }
 
 STATUS = {
@@ -12,11 +17,35 @@ STATUS = {
     "w": "WARNING"
 }
 
-def message(message_content):
+MESSAGE_TRAY = []
+
+# Echo
+def normal_message(message_content):
     print(message_content)
 
 def progress_message(status_code, message_content):
     print("{:10s}{}".format("[" + STATUS[status_code] + "]", message_content))
 
 def error_message(error_obj, error_code):
-    print(error_obj + ": " + message_content)
+    print(error_obj + ": " + ERROR[error_code])
+
+# Message tray
+def add_message(message):
+    MESSAGE_TRAY.append(message)
+
+def can_show_messages():
+    if len(MESSAGE_TRAY) == 0:
+        return False
+
+    return True
+
+def show_messages():
+    global MESSAGE_TRAY
+    for message in MESSAGE_TRAY:     
+        if (message["type"] == "error_message"):
+            error_message(message["error_obj"], message["error_code"])
+        elif (message["type"] == "progress_message"):
+            progress_message(message["status_code"], message["message_content"])
+        elif (message["type"] == "normal_message"):
+            normal_message(message["message_content"])
+    MESSAGE_TRAY = []

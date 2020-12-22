@@ -1,4 +1,4 @@
 {
     "node_name": "default_node",
-    "Database": { }
+    "databases": { }
 }
