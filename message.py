@@ -8,7 +8,8 @@ ERROR = {
     "fic": "Couldn't load this file.",
     "drn": "No such directory.",
     "prn": "Couldn't find this property.",
-    "ndn": "Couldn't find this node."
+    "ndn": "Couldn't find this node.",
+    "dnn": "This name doesn't accepted."
 }
 
 STATUS = {

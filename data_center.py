@@ -30,7 +30,7 @@ def save_config():
 
 # Database
 def packet_count(database):
-    return DATABASES[database].size()
+    return len(DATABASES[database])
 
 def get_packet(database, index):
     return DATABASES[database][index]
@@ -42,10 +42,17 @@ def append_packet(database, packet):
     DATABASES[database].append(packet)
 
 def database_count():
-    return DATABASES.keys().size()
+    return len(DATABASES.keys())
 
 def database_keys():
     return DATABASES.keys()
+
+def is_true_database_name(database_name):
+    chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+    for c in database_name:
+        if not c in chrs:
+            return False
+    return True
 
 def in_databases(database):
     return database in DATABASES
