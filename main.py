@@ -1,7 +1,7 @@
 import json
 
 def main():
-    pass
+    passe
 
 if __name__ == "__main__":
     main()
