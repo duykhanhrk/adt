@@ -24,8 +24,6 @@ delete <DB>
 
 dbs [DB] .. [DB]
 
-ext [EXT_ID]
-
 get <DB> <link> [OPTION]
     OPTION
         -f <FROM PAGE> <TO PAGE>
@@ -46,9 +44,19 @@ view <DB> [OPTION]
         
 find <EXP> <DB> .. [DB]
 
-save [NODE]
+| ext list
 
-load [NODE]
+| ext add <EXT FILE (.json)>
+
+| ext delete <EXT>
+
+| node list
+
+| node save [OPTION]
+    OPTION
+        -s <NODE NAME>
+
+| node delete <NODE>
 -----------------------------------------------
 -----------------------------------------------
 ------------------------

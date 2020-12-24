@@ -1,0 +1,2 @@
+def handle(command):
+    pass
