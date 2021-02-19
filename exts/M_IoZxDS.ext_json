@@ -1,0 +1,18 @@
+{
+    "name": "ani4u.org",
+    "version": "1",
+    "server": "http://ani4u.org",
+    "detail": "no detail",
+    "page": "$link?page=$page",
+    "guide": {
+        "node": {},
+        "type": "list",
+        "item": {
+            "name": {},
+            "href": {},
+            "src": {},
+            "rate": {},
+            "description": {}
+        }
+    }
+}

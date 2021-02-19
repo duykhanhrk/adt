@@ -3,12 +3,12 @@ import message
 import storage
 
 def act(file_path):
-    if does_file_exist(file_path):
+    if not storage.does_file_exist(file_path):
         message.error_message(file_path, "fid")
         return False
 
     storage.add_ext(file_path)
-    reutrn True
+    return True
 
 def handle(command):
     if len(command) == 0:

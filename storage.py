@@ -63,7 +63,7 @@ def add_ext(file_path):
     while does_file_exist(data_center.get_exts_folder() + SAPERATE + str_id + ".ext_json"):
         str_id = make_string_id()
 
-    copy(file_path, data_center.get_exts_folder() + SAPERATE + str_id + ".ext_json", data)
+    copy(file_path, data_center.get_exts_folder() + SAPERATE + str_id + ".ext_json")
 
 def load_node(node_id):
     return load(data_center.get_nodes_folder() + SAPERATE + node_id + ".node_json")
