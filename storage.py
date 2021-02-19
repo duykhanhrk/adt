@@ -2,6 +2,8 @@ import data_center
 import json
 import os
 import platform
+import random
+import shutil
 
 SAPERATE = "\\"
 
@@ -38,12 +40,30 @@ def save(file_path, data):
     with open(file_path, "w") as outfile:
         json.dump(data, outfile)
 
+def copy(from_file_path, to_file_path):
+    shutil.copyfile(from_file_path, to_file_path)
+
+def make_string_id():
+    chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+    str_id = ""
+    for i in range(8):
+        str_id += chrs[random.randint(0, 62)]
+
+    return str_id
+
 # ext and node
 def load_ext(ext_id):
     return load(data_center.get_exts_folder() + SAPERATE + ext_id + ".ext_json")
 
 def save_ext(ext_id, data):
     save(data_center.get_exts_folder() + SAPERATE + ext_id + ".ext_json", data)
+
+def add_ext(file_path):
+    str_id = make_string_id()
+    while does_file_exist(data_center.get_exts_folder() + SAPERATE + str_id + ".ext_json"):
+        str_id = make_string_id()
+
+    copy(file_path, data_center.get_exts_folder() + SAPERATE + str_id + ".ext_json", data)
 
 def load_node(node_id):
     return load(data_center.get_nodes_folder() + SAPERATE + node_id + ".node_json")
