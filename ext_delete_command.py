@@ -2,17 +2,17 @@ import data_center
 import message
 import storage
 
-def act(node_id):
-    if not does_node_exist(node_id):
-        message.error_message(file_path, "ndn")
+def act(ext_id):
+    if not does_ext_exist(ext_id):
+        message.error_message(file_path, "etn")
         return False
 
-    storage.delete_node(node_id)
+    storage.delete_ext(ext_id)
     return True
 
 def handle(command):
     if len(command) == 0:
-        message.error_message("NODE ID::NULL", "cmw")
+        message.error_message("EXT ID::NULL", "cmw")
         return False
 
     if len(command) == 1:
