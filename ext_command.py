@@ -11,5 +11,5 @@ def handle(command):
     elif command[0] == "add":
         return ext_add_command.handle(command[1:])
     else:
-        message.error_message(message[0], "cmd")
+        message.error_message(command[0], "cmd")
         return False
