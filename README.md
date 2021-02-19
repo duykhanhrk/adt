@@ -19,6 +19,6 @@ ext       delete &lt;EXT ID&gt;
           Delete a Ext
 node      list
           Show all Nodes
-ext       delete &lt;NODE ID&gt;
+node      delete &lt;NODE ID&gt;
           Delete a Node
 </pre>
