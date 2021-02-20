@@ -1,4 +1,1 @@
-{
-    "name": "default_node",
-    "databases": { }
-}
+{"name": "default_node", "databases": {"hello": [], "hi": []}}

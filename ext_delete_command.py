@@ -3,8 +3,8 @@ import message
 import storage
 
 def act(ext_id):
-    if not does_ext_exist(ext_id):
-        message.error_message(file_path, "etn")
+    if not storage.does_ext_exist(ext_id):
+        message.error_message(ext_id, "etn")
         return False
 
     storage.delete_ext(ext_id)

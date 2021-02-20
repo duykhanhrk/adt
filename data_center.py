@@ -81,9 +81,10 @@ def ufity_databases(into_database, from_database):
             DATABASES[into_database].append(data)
 
 def load_node():
+    global DATABASES
     node = storage.load_node(get_current_node())
     DATABASES = node["databases"]
     return True
 
 def save_node(node_name):
-    storage.save_node(node_name, { "name": node_name, "database": DATABASES })
+    storage.save_node(node_name, { "name": node_name, "databases": DATABASES })

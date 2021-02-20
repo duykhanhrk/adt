@@ -4,12 +4,12 @@ import storage
 
 def act(node_id):
 
-    data_center.save_node(data_center.get_current_node())
+    data_center.save_node(node_id)
     return True
 
 def handle(command):
     if len(command) == 0:
-        return act(node_id, {})
+        return act(data_center.get_current_node())
 
     if len(command) == 1:
         # Check if this node id is correct.
@@ -18,8 +18,8 @@ def handle(command):
             return False
 
         # Check that the node id already exists.
-        if not storage.does_node_exist(command[0]):
-            message.error_message(command[1], "nde")
+        if storage.does_node_exist(command[0]):
+            message.error_message(command[0], "nde")
             return False
 
         return act(command[0])

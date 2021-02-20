@@ -3,8 +3,8 @@ import message
 import storage
 
 def act(node_id):
-    if not does_node_exist(node_id):
-        message.error_message(file_path, "ndn")
+    if not storage.does_node_exist(node_id):
+        message.error_message(node_id, "ndn")
         return False
 
     storage.delete_node(node_id)
