@@ -52,9 +52,7 @@ ext add <EXT FILE (.json)>
 
 node list
 
-| node save [OPTION]
-    OPTION
-        -s <NODE NAME>
+| node save [NODE NAME]
 
 | node delete <NODE>
 -----------------------------------------------

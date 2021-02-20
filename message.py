@@ -9,6 +9,7 @@ ERROR = {
     "drn": "No such directory.",
     "prn": "Couldn't find this property.",
     "ndn": "Couldn't find this node.",
+    "nde": "This node already exists.",
     "dnn": "This name doesn't accepted.",
     "etn": "Couldn't find this ext."
 }
