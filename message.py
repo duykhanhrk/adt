@@ -32,8 +32,8 @@ def progress_message(status_code, message_content):
 def error_message(error_obj, error_code):
     print(error_obj + ": " + ERROR[error_code])
 
-def help_message(command_name, arguments_string, description):
-    print("{:10s}{}\n{:10s}{}".format(command_name, arguments_string, "", description))
+def help_message(command_name, arguments, description):
+    print("{:10s}{}\n{:10s}{}".format(command_name, arguments, "", description))
 
 # Message tray
 def add_message(message):
@@ -54,4 +54,6 @@ def show_messages():
             progress_message(message["status_code"], message["message_content"])
         elif (message["type"] == "normal_message"):
             normal_message(message["message_content"])
+        elif (message["type"] == "help_message"):
+            help_message(message["command_name", "arguments", "description"])    
     MESSAGE_TRAY = []
