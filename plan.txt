@@ -29,8 +29,9 @@ dbs [DB] .. [DB]
         -f <FROM PAGE> <TO PAGE>
         -s <PAGE> .. [PAGE]
         --a | default
+        -e <EXT ID>
 
-| change <DB> <FROM DB> [OPTION]
+change <DB> <FROM DB> [OPTION]
     OPTION
         --g | default
         --i

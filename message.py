@@ -11,7 +11,11 @@ ERROR = {
     "ndn": "Couldn't find this node.",
     "nde": "This node already exists.",
     "dnn": "This name doesn't accepted.",
-    "etn": "Couldn't find this ext."
+    "etn": "Couldn't find this ext.",
+    "mpi": "Must be a positive integer",
+    "sns": "This server is not supported",
+    "cng": "Couldn't get data",
+    "epd": "Error processing data"
 }
 
 STATUS = {

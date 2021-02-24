@@ -75,7 +75,7 @@ def copy_database(database, from_database):
 def add_databases(into_database, from_database):
     DATABASES[into_database] = DATABASES[into_database] + DATABASES[from_database]
 
-def ufity_databases(into_database, from_database):
+def merge_databases(into_database, from_database):
     for data in DATABASES[from_database]:
         if not data in DATABASES[into_database]:
             DATABASES[into_database].append(data)

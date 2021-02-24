@@ -22,8 +22,8 @@ def act(database, from_database, options):
         data_center.add_databases(database, from_database)
         return True
 
-    if options["method"] == "--u":
-        data_center.ufity_databases(database, from_database)
+    if options["method"] == "--m":
+        data_center.merge_databases(database, from_database)
         return True
     
     return False
