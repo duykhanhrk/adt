@@ -134,7 +134,7 @@ def handle(tutorial_obj, html_text):
 	if not "guide":
 		raise "tutorial_obj: There must have \'guide\' property."
 
-	if tutorial_obj["vesion"] == "1":
+	if tutorial_obj["version"] == "1":
 		guide_handle(tutorial_obj["guide"], html_text)
 	else
 		raise "tutorial_obj.version: no \'" + tutorial_obj["version"] + "\'."
