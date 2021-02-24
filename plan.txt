@@ -24,85 +24,36 @@ delete <DB>
 
 dbs [DB] .. [DB]
 
-get <DB> <link> [OPTION]
+| get <DB> <link> [OPTION]
     OPTION
         -f <FROM PAGE> <TO PAGE>
         -s <PAGE> .. [PAGE]
         --a | default
 
-change <DB> <FROM DB> [OPTION]
+| change <DB> <FROM DB> [OPTION]
     OPTION
         --g | default
         --i
         --t
 
-view <DB> [OPTION]
+| view <DB> [OPTION]
     OPTION
         --a | default
         -s <INDEX> .. <INDEX>
         -f <FROM INDEX> <TO INDEX>
         
-find <EXP> <DB> .. [DB]
+| find <EXP> <DB> .. [DB]
 
 ext list
 
 ext add <EXT FILE (.json)>
 
-| ext delete <EXT>
+ext delete <EXT>
+
+| node set <NODE ID>
 
 node list
 
-| node save [NODE NAME]
+node save [NODE NAME]
 
-| node delete <NODE>
------------------------------------------------
------------------------------------------------
-------------------------
-tutorial.py
-------------------------
-node_handle(node_obj, node)
-guide_handle(guide_obj, node)
-handle()
-------------------------
-------------------------
-message.py
-------------------------
-ERROR = {}
-STATUS = {}
-message(message_content)
-progress_message(status, message_content)
-error_message(error_obj, error_code)
-
-Exmaple:
-[SUCCESS] https://athena.com
-'error': This command is wrong.
-------------------------
-------------------------
-main.py
-main -> is_config_file_exists? -> center.load_config() -> is_config_ok? -> is_tree_ok? -> center.load_database -> act
-------------------------
-main()
-is_tree_ok()
-------------------------
-------------------------
-branch_center.py
-------------------------
-handle(command)
-------------------------
-------------------------
-new_command.py
-------------------------
-handle(command)
-is_input_ok()
-act()
-------------------------
------------------------------------------------
------------------------------------------------
-<=> main ::::::::::::::::: center
-    |                       ::
-branch_center ==            :: 
-|              |            ::
-new_command  delete_command ::
-   ::             ::        ::
-::::::::::::::::::::::::::::::
------------------------------------------------
+node delete <NODE>
