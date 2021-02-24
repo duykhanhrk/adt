@@ -5,6 +5,7 @@ import dbs_command
 import ext_command
 import node_command
 import change_command
+import help_command
 
 def handle(command):
     if command[0] == "new":
@@ -19,6 +20,8 @@ def handle(command):
         return node_command.handle(command[1:])
     elif command[0] == "change":
         return change_command.handle(command[1:])
+    elif command[0] == "help":
+        return help_command.handle(command[1:])
     elif command[0] == "exit":
         if len(command) > 1:
             message.error_message(command[1], "cmw")

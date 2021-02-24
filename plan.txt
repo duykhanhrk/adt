@@ -50,8 +50,6 @@ ext add <EXT FILE (.json)>
 
 ext delete <EXT>
 
-| node set <NODE ID>
-
 node list
 
 node save [NODE NAME]

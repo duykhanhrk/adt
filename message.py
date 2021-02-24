@@ -32,6 +32,9 @@ def progress_message(status_code, message_content):
 def error_message(error_obj, error_code):
     print(error_obj + ": " + ERROR[error_code])
 
+def help_message(command_name, arguments_string, description):
+    print("{:10s}{}\n{:10s}{}".format(command_name, arguments_string, "", description))
+
 # Message tray
 def add_message(message):
     MESSAGE_TRAY.append(message)
