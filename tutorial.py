@@ -93,8 +93,8 @@ def guide_handle(guide_obj, node):
 		for key, value in guide_obj["properties"].items():
 			result[key] = guide_handle(value, node)
 	elif guide_obj["type"] == "list":
-		if not "properties" in guide_obj:
-			raise "guide_obj: dict type needs \'properties\' property."
+		if not "item" in guide_obj:
+			raise Exception("guide_obj: list type needs \'item\' property.")
 
 		result = []
 		for _node in node:
@@ -129,12 +129,14 @@ def guide_handle(guide_obj, node):
 # html_text is a string.
 def handle(tutorial_obj, html_text):
 	if not "version" in tutorial_obj:
-		raise "tutorial_obj: There must have \'version\' property."
+		raise Exception("tutorial_obj: There must have \'version\' property.")
 
 	if not "guide":
-		raise "tutorial_obj: There must have \'guide\' property."
+		raise Exception("tutorial_obj: There must have \'guide\' property.")
+
+	html_text = BeautifulSoup(html_text,"html5lib")
 
 	if tutorial_obj["version"] == "1":
-		guide_handle(tutorial_obj["guide"], html_text)
-	else
-		raise "tutorial_obj.version: no \'" + tutorial_obj["version"] + "\'."
+		return guide_handle(tutorial_obj["guide"], html_text)
+	else:
+		raise Exception("tutorial_obj.version: no \'" + tutorial_obj["version"] + "\'.")

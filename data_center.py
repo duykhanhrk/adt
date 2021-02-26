@@ -64,6 +64,7 @@ def set_database(database, data):
     DATABASES[database] = data
 
 def append_database(database, data):
+    global DATABASES
     DATABASES[database] = data
 
 def remove_database(database):

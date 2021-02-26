@@ -1,18 +1,75 @@
 {
     "name": "animehay.tv",
     "version": "1",
-    "server": "http://animehay.tv",
+    "server": "animehay.tv",
     "detail": "no detail",
     "page": "$link?page=$page",
     "guide": {
-        "node": {},
+        "node": [
+            {
+                "tag": "div",
+                "attribute": { "class": "ah-row-film ah-clear-both" },
+                "type": "only"
+            },
+            {
+                "tag": "div",
+                "attribute": { "class": "ah-pad-film" },
+                "type": "all"
+            }
+        ],
         "type": "list",
         "item": {
-            "name": {},
-            "href": {},
-            "src": {},
-            "rate": {},
-            "description": {}
+            "type": "dict",
+            "properties": {
+                "name": {
+                    "node": {
+                        "tag": "span",
+                        "attribute": { "class": "name-film" },
+                        "type": "only"
+                    },
+
+                    "type": "text"
+                },
+                "href": {
+                    "node": {
+                        "tag": "a",
+                        "type": "only"
+                    },
+
+                    "type": "attribute",
+                    "attribute": "href"
+                },
+                "src": {
+                    "node": {
+                        "tag": "img",
+                        "type": "only"
+                    },
+
+                    "type": "attribute",
+                    "attribute": "src"
+                },
+                "rate": {
+                    "node": {
+                        "tag": "span",
+                        "attribute": { "class": "rate-point" },
+                        "type": "only"
+                    },
+
+                    "type": "text"
+                },
+                "episode": {
+                    "node": {
+                        "tag": "span",
+                        "attribute": { "class": "number-ep-film" },
+                        "type": "only"
+                    },
+
+                    "type": "text",
+                    "option": {
+                        "works": ["strip"]
+                    }
+                }
+            }
         }
     }
 }
