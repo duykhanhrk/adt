@@ -24,11 +24,12 @@ delete <DB>
 
 dbs [DB] .. [DB]
 
-| get <DB> <link> [OPTION]
+get <DB> <link> [OPTION]
     OPTION
         -f <FROM PAGE> <TO PAGE>
         -s <PAGE> .. [PAGE]
-        --a | default
+        --o | default
+        --a
         -e <EXT ID>
 
 change <DB> <FROM DB> [OPTION]
