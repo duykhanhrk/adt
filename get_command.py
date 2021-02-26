@@ -5,7 +5,7 @@ import tutorial
 import message
 
 default_options = {
-    'method': '--a'
+    'method': '--o'
 }
 
 def act(db, url, options):
