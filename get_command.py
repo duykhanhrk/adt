@@ -17,7 +17,7 @@ def act(db, url, options):
 
         while True:
             page += 1
-            page_url = support.map_vari(ext_json.page, ["$base_link", "$base"], [url, page])
+            page_url = support.map_vari(ext_json["page"], [ {"var": "$link", "value": url}, {"var": "$page", "value": page}])
             
             html_text = ""
             try:
@@ -28,7 +28,7 @@ def act(db, url, options):
             
             data_extracted = []
             try:
-                data_extracted = tutorial.handle(ext_json.guide, html_text)
+                data_extracted = tutorial.handle(ext_json, html_text)
             except:
                 message.error_message(options["ext"], "epd")
                 return False
@@ -41,29 +41,27 @@ def act(db, url, options):
 
         data_center.append_database(db, data)
     elif options["method"] == "--o":
-        data = []
-
         html_text = ""
         try:
             html_text = support.get_data_from_url(url)
         except:
-            message.error_message(page_url, "cng")
+            message.error_message(url, "cng")
             return False
             
         try:
-            data = tutorial.handle(ext_json.guide, html_text)
+            data = tutorial.handle(ext_json, html_text)
         except:
             message.error_message(options["ext"], "epd")
             return False
 
-        message.progress_message("s", "GET {}".format(page_url))
+        message.progress_message("s", "GET {}".format(url))
 
         data_center.append_database(db, data)
     elif options["method"] == "-f":
         data = []
 
-        for page in range(options["from_page"]..options["to_page"]):
-            page_url = support.map_vari(ext_json.page, ["$base_link", "$base"], [url, page])
+        for page in range(options["from_page"], options["to_page"] + 1):
+            page_url = support.map_vari(ext_json["page"], [ {"var": "$link", "value": url}, {"var": "$page", "value": page}])
             
             html_text = ""
             try:
@@ -74,7 +72,7 @@ def act(db, url, options):
             
             data_extracted = []
             try:
-                data_extracted = tutorial.handle(ext_json.guide, html_text)
+                data_extracted = tutorial.handle(ext_json, html_text)
             except:
                 message.error_message(options["ext"], "epd")
                 return False
@@ -90,7 +88,7 @@ def act(db, url, options):
         data = []
 
         for page in options["pages"]:
-            page_url = support.map_vari(ext_json.page, ["$base_link", "$base"], [url, page])
+            page_url = support.map_vari(ext_json["page"], [ {"var": "$link", "value": url}, {"var": "$page", "value": page}])
             
             html_text = ""
             try:
@@ -101,7 +99,7 @@ def act(db, url, options):
             
             data_extracted = []
             try:
-                data_extracted = tutorial.handle(ext_json.guide, html_text)
+                data_extracted = tutorial.handle(ext_json, html_text)
             except:
                 message.error_message(options["ext"], "epd")
                 return False
@@ -153,12 +151,12 @@ def handle(command):
             return False
 
         from_page = support.to_int(command[loc + 1])
-        if from_page == NULL or from_page < 1:
+        if from_page == None or from_page < 1:
             message.error_message("FROM PAGE:{}".format(from_page), "mpi")
             return False
 
         to_page = support.to_int(command[loc + 2])
-        if to_page == NULL or to_page < 1:
+        if to_page == None or to_page < 1:
             message.error_message("FROM PAGE:{}".format(to_page), "mpi")
             return False
 
@@ -180,9 +178,9 @@ def handle(command):
             return False
 
         pages = []
-        for i in range(loc..len(command)):
-            page = command[i]
-            if page == NULL or page < 1:
+        for i in range(loc + 1, len(command)):
+            page = support.to_int(command[i])
+            if page == None or page < 1:
                 message.error_message("PAGE:{}".format(page), "mpi")
                 return False
             pages.append(page)
@@ -207,7 +205,7 @@ def handle(command):
         if not "ext" in options:
             options['ext'] = support.choose_ext(command[1])
 
-            if options[ext] == NULL:
+            if options['ext'] == None:
                 message.error_message(command[1], 'sns')
                 return False
         else:

@@ -6,6 +6,7 @@ import ext_command
 import node_command
 import change_command
 import help_command
+import get_command
 
 def handle(command):
     if command[0] == "new":
@@ -14,6 +15,8 @@ def handle(command):
         return delete_command.handle(command[1:])
     elif command[0] == "dbs":
         return dbs_command.handle(command[1:])
+    elif command[0] == "get":
+        return get_command.handle(command[1:])
     elif command[0] == "ext":
         return ext_command.handle(command[1:])
     elif command[0] == "node":
