@@ -2,6 +2,7 @@ import storage
 import message
 import data_center
 import branch_center
+import sys
 
 def prepare_data():
     if not storage.does_file_exist("config.json"):
@@ -44,6 +45,12 @@ def prepare_data():
 
 def main():
     if not prepare_data():
+        return 1
+
+    sys.argv.pop(0)
+    if len(sys.argv) > 0:
+        while len(sys.argv) > 0:
+            branch_center.handle(sys.argv.pop(0).split(" "))
         return 1
 
     while True:

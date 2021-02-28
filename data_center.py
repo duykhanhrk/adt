@@ -58,7 +58,7 @@ def in_databases(database):
     return database in DATABASES
 
 def get_database(database):
-    return database
+    return DATABASES[database]
 
 def set_database(database, data):
     DATABASES[database] = data

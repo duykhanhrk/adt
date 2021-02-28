@@ -38,7 +38,7 @@ change <DB> <FROM DB> [OPTION]
         --i
         --t
 
-| view <DB> [OPTION]
+view <DB> [OPTION]
     OPTION
         --a | default
         -s <INDEX> .. <INDEX>

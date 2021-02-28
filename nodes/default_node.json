@@ -1,0 +1,14 @@
+{
+    "name": "default_node",
+    "databases": {
+        "halo": [
+            {
+                "name": "Tenkuu Shinpan",
+                "href": "https://animehay.tv/phim/tenkuu-shinpan-f3340.html",
+                "src": "https://animehay.tv/uploads/images/2021/02/tenkuu-shinpan-thumbnail.jpg",
+                "rate": "NaN",
+                "episode": "12/12"
+            }
+        ]
+    }
+}
