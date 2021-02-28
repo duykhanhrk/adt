@@ -8,12 +8,16 @@
         "node": [
             {
                 "tag": "div",
-                "attribute": { "class": "ah-row-film ah-clear-both" },
+                "attribute": {
+                    "class": "ah-row-film ah-clear-both"
+                },
                 "type": "only"
             },
             {
                 "tag": "div",
-                "attribute": { "class": "ah-pad-film" },
+                "attribute": {
+                    "class": "ah-pad-film"
+                },
                 "type": "all"
             }
         ],
@@ -24,18 +28,23 @@
                 "name": {
                     "node": {
                         "tag": "span",
-                        "attribute": { "class": "name-film" },
+                        "attribute": {
+                            "class": "name-film"
+                        },
                         "type": "only"
                     },
-
-                    "type": "text"
+                    "type": "text",
+                    "option": {
+                        "works": [
+                            "strip"
+                        ]
+                    }
                 },
                 "href": {
                     "node": {
                         "tag": "a",
                         "type": "only"
                     },
-
                     "type": "attribute",
                     "attribute": "href"
                 },
@@ -44,29 +53,32 @@
                         "tag": "img",
                         "type": "only"
                     },
-
                     "type": "attribute",
                     "attribute": "src"
                 },
                 "rate": {
                     "node": {
                         "tag": "span",
-                        "attribute": { "class": "rate-point" },
+                        "attribute": {
+                            "class": "rate-point"
+                        },
                         "type": "only"
                     },
-
                     "type": "text"
                 },
                 "episode": {
                     "node": {
                         "tag": "span",
-                        "attribute": { "class": "number-ep-film" },
+                        "attribute": {
+                            "class": "number-ep-film"
+                        },
                         "type": "only"
                     },
-
                     "type": "text",
                     "option": {
-                        "works": ["strip"]
+                        "works": [
+                            "strip"
+                        ]
                     }
                 }
             }

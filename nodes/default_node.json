@@ -1,0 +1,148 @@
+{
+    "name": "default_node",
+    "databases": {
+        "halo": [
+            {
+                "name": "Tenkuu Shinpan",
+                "href": "https://animehay.tv/phim/tenkuu-shinpan-f3340.html",
+                "src": "https://animehay.tv/uploads/images/2021/02/tenkuu-shinpan-thumbnail.jpg",
+                "rate": "NaN",
+                "episode": "12/12",
+                "category": ["Action", "Comedy"]
+            },
+            {
+                "name": "Ore dake Haireru Kakushi Dungeon",
+                "href": "https://animehay.tv/phim/ore-dake-haireru-kakushi-dungeon-f3310.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/ore-dake-haireru-kakushi-dungeon-thumbnail.jpg",
+                "rate": "7.6",
+                "episode": "8/??"
+            },
+            {
+                "name": "\u0110\u1ea5u La \u0110\u1ea1i L\u1ee5c",
+                "href": "https://animehay.tv/phim/dau-la-dai-luc-f2575.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/dau-la-dai-luc-thumbnail.png",
+                "rate": "9.3",
+                "episode": "145/??"
+            },
+            {
+                "name": "Kumo desu ga, Nani ka",
+                "href": "https://animehay.tv/phim/kumo-desu-ga-nani-ka-f3308.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/kumo-desu-ga-nani-ka-thumbnail.jpg",
+                "rate": "9.4",
+                "episode": "8/??"
+            },
+            {
+                "name": "Hortensia Saga (TV)",
+                "href": "https://animehay.tv/phim/hortensia-saga-tv-f3311.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/hortensia-saga-tv-thumbnail.jpg",
+                "rate": "6.4",
+                "episode": "8/??"
+            },
+            {
+                "name": "Digimon Adventure (2020)",
+                "href": "https://animehay.tv/phim/digimon-adventure-2020-f3157.html",
+                "src": "https://animehay.tv/uploads/images/2020/04/digimon-adventure-2020-thumbnail.jpg",
+                "rate": "8.2",
+                "episode": "24/??"
+            },
+            {
+                "name": "Jujutsu Kaisen (TV)",
+                "href": "https://animehay.tv/phim/jujutsu-kaisen-tv-f3242.html",
+                "src": "https://animehay.tv/uploads/images/2020/09/jujutsu-kaisen-tv-thumbnail.jpg",
+                "rate": "9.6",
+                "episode": "20/24"
+            },
+            {
+                "name": "Azur Lane: Bisoku Zenshin!",
+                "href": "https://animehay.tv/phim/azur-lane-bisoku-zenshin-f3339.html",
+                "src": "https://animehay.tv/uploads/images/2021/02/azur-lane-bisoku-zenshin-thumbnail.jpg",
+                "rate": "NaN",
+                "episode": "4/??"
+            },
+            {
+                "name": "Linh Ki\u1ebfm T\u00f4n",
+                "href": "https://animehay.tv/phim/linh-kiem-ton-f2882.html",
+                "src": "https://animehay.tv/uploads/images/2019/01/linh-kiem-ton-thumbnail.jpg",
+                "rate": "7.4",
+                "episode": "153/200"
+            },
+            {
+                "name": "V\u1ea1n Gi\u1edbi Ph\u00e1p Th\u1ea7n",
+                "href": "https://animehay.tv/phim/van-gioi-phap-than-f3296.html",
+                "src": "https://animehay.tv/uploads/images/2020/12/van-gioi-phap-than-thumbnail.png",
+                "rate": "7.1",
+                "episode": "22/50"
+            },
+            {
+                "name": "Yakusoku no Neverland 2nd Season",
+                "href": "https://animehay.tv/phim/yakusoku-no-neverland-2nd-season-f3303.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/yakusoku-no-neverland-2nd-season-thumbnail.jpg",
+                "rate": "9.7",
+                "episode": "7/12"
+            },
+            {
+                "name": "Nanatsu no Taizai: Fundo no Shinpan",
+                "href": "https://animehay.tv/phim/nanatsu-no-taizai-fundo-no-shinpan-f3321.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/nanatsu-no-taizai-fundo-no-shinpan-thumbnail.jpg",
+                "rate": "8.7",
+                "episode": "7/??"
+            },
+            {
+                "name": "Gotoubun no Hanayome \u222c",
+                "href": "https://animehay.tv/phim/gotoubun-no-hanayome-s2-f3304.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/gotoubun-no-hanayome-s2-thumbnail.jpg",
+                "rate": "9.6",
+                "episode": "8/12"
+            },
+            {
+                "name": "Higurashi no Naku Koro ni Gou",
+                "href": "https://animehay.tv/phim/higurashi-no-naku-koro-ni-2020-f3243.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/higurashi-no-naku-koro-ni-2020-thumbnail-1609852737.jpg",
+                "rate": "8.1",
+                "episode": "21/24"
+            },
+            {
+                "name": "Dr. Stone: Stone Wars",
+                "href": "https://animehay.tv/phim/dr-stone-stone-wars-f3322.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/dr-stone-stone-wars-thumbnail.jpg",
+                "rate": "9.8",
+                "episode": "7/11"
+            },
+            {
+                "name": "L\u01b0u Tinh Huy\u1ec5n Ki\u1ebfm",
+                "href": "https://animehay.tv/phim/luu-tinh-huyen-kiem-f3332.html",
+                "src": "https://animehay.tv/uploads/images/2021/02/luu-tinh-huyen-kiem-thumbnail.png",
+                "rate": "8.0",
+                "episode": "12/60"
+            },
+            {
+                "name": "Log Horizon: Entaku Houkai",
+                "href": "https://animehay.tv/phim/log-horizon-entaku-houkai-f3318.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/log-horizon-entaku-houkai-thumbnail.jpg",
+                "rate": "9.5",
+                "episode": "7/12"
+            },
+            {
+                "name": "\u0110\u1ed9c B\u1ed9 Ti\u00eau Dao",
+                "href": "https://animehay.tv/phim/doc-bo-tieu-dao-f3199.html",
+                "src": "https://animehay.tv/uploads/images/2020/06/doc-bo-tieu-dao-thumbnail.jpg",
+                "rate": "6.5",
+                "episode": "76/80"
+            },
+            {
+                "name": "T\u1ea7n Th\u1eddi Minh Nguy\u1ec7t ph\u1ea7n 6: Th\u01b0\u01a1ng H\u1ea3i Ho\u00e0nh L\u01b0u",
+                "href": "https://animehay.tv/phim/tan-thoi-minh-nguyet-phan-6-thuong-hai-hoanh-luu-f3268.html",
+                "src": "https://animehay.tv/uploads/images/2020/10/tan-thoi-minh-nguyet-phan-6-thuong-hai-hoanh-luu-thumbnail-1601671606.jpg",
+                "rate": "8.4",
+                "episode": "24/36"
+            },
+            {
+                "name": "Wonder Egg Priority",
+                "href": "https://animehay.tv/phim/wonder-egg-priority-f3317.html",
+                "src": "https://animehay.tv/uploads/images/2021/01/wonder-egg-priority-thumbnail.jpg",
+                "rate": "9.3",
+                "episode": "7/12"
+            }
+        ]
+    }
+}
